@@ -9,7 +9,7 @@ module Dyph3
           [
             [],
             false,
-            [ {type: :non_conflict, text: [] } ]
+            [ {type: :non_conflict, text: []} ]
           ]
         elsif merge_result.length == 1 && merge_result[0][:type] == :non_conflict
           [
