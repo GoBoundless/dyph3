@@ -21,7 +21,7 @@ module Dyph3
 
       # sanity check: make sure anything new in left or right made it through the merge
       if has_conflict(return_value) && conflict_function
-        conflict_function[return_value]
+        conflict_function[return_value[2]]
       else
         Dyph3::Support::SanityCheck.ensure_no_lost_data(left, base, right, return_value)
         join_results(return_value, join_function: join_function)
