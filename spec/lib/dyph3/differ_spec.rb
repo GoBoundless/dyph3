@@ -106,11 +106,11 @@ describe Dyph3::Differ do
         let(:right) { Fish.new(:pollock) }
 
         let!(:merged_array) do
-          Dyph3::Differ.merge_text(left, base, right )
+          Dyph3::Differ.merge_text(left, base, right)
         end
 
         it "should have merged successfully" do
-          expect(merged_array.last.last[:conflict_custom]).to eq [:tuna]
+          expect(merged_array.last[:conflict_custom]).to eq [:tuna]
         end
       end
 
